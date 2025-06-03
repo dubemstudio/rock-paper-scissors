@@ -1,0 +1,63 @@
+/* Import Font  */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Default Styles */
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+:root{
+  /* Font styles */
+  --font-main: "Space Mono", monospace;
+  --font-body: "League Spartan", sans-serif;
+
+  /* Light Theme Colors style */
+  --color-primary: #5865F2;
+  --color-background: #ECEEFE;
+  --color-surface-1dp: #DADDFC;
+  --color-surface-2dp: #9098F6;
+  --color-bubble-1dp: #C7CCFB;
+  --color-bubble-2dp: #B5BBF9;
+  --color-bubble-3dp: #A2A9F8;
+  --color-black: #0A0B1B;
+  --color-white: #ECEEFE;
+}
+
+/* Dark Theme Colors style */
+[data-theme="dark"]{
+  --color-primary: #5865F2;
+  --color-background: #0A0B1B;
+  --color-surface-1dp: #141636;
+  --color-surface-2dp: #3B43A1;
+  --color-bubble-1dp: #1D2251;
+  --color-bubble-2dp: #272D6C;
+  --color-bubble-3dp: #313886;
+  --color-black: #0A0B1B;
+  --color-white: #ECEEFE;
+}
+
