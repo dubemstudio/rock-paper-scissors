@@ -66,12 +66,12 @@ body{
   position: relative;
   background-color: var(--color-background);
   height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
 }
 
 /* Bubble background style */
 .bubbles__wrapper {
   position: absolute;
-  width: 100%;
   height: 100%;
   position: relative;
 }
