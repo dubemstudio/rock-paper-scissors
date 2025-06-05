@@ -4,42 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors | Project 3</title>
-  <link rel="shortcut icon" href="image/logo.svg" type="image/png">
+  <link rel="icon" href="image/logo.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="main.css">
 </head>
 <body data-theme="">
   
   <div class="bubbles__wrapper">
-    <div class="bubble bubble__1dp"></div>
-    <div class="bubble bubble__1dp"></div>
-    <div class="bubble bubble__1dp"></div>
-    <div class="bubble bubble__2dp"></div>
-    <div class="bubble bubble__2dp"></div>
-    <div class="bubble bubble__2dp"></div>
-    <div class="bubble bubble__2dp"></div>
-    <div class="bubble bubble__3dp"></div>
-    <div class="bubble bubble__3dp"></div>  
-    <div class="bubble bubble__3dp"></div>
+    <div class="bubble x1 bubble__1dp"></div>
+    <div class="bubble x2 bubble__1dp"></div>
+    <div class="bubble x3 bubble__1dp"></div>
+    <div class="bubble x4 bubble__2dp"></div>
+    <div class="bubble x5 bubble__2dp"></div>
+    <div class="bubble x6 bubble__2dp"></div>
+    <div class="bubble x7 bubble__2dp"></div>
+    <div class="bubble x8 bubble__3dp"></div>
+    <div class="bubble x9 bubble__3dp"></div>  
+    <div class="bubble x10 bubble__3dp"></div>
   </div>
 
   <header>
     
   </header>
 
-  <main class="modal__wrapper">
-    <div class="modal__image-wrapper">
-      <img src="image/illustrationGroupLight.svg" alt="Rock, Paper, Scissors illustration">
+  <main class="modal__wrapper" role="dialog">
+    <div class="modal__illustration">
+      <div class="modal__image-wrapper">
+        <img src="image/illustrationGroupLight.svg" alt="Rock, Paper, Scissors illustration">
+      </div>
+      
+      
+      <span class="modal__title">r-p-s</span>
     </div>
     
-    <span class="modal__title">r-p-s</span>
-    
-    <a href="signUp.html">
-      <button class="modal__button">
+      <button class="modal__button" onclick="location.href='signUp.html'">
         <span class="button__text">next</span>
         <ion-icon class="button__icon" name="arrow-forward"></ion-icon>
       </button>
-    </a>
   </main>
 
   
