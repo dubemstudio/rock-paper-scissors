@@ -1,0 +1,262 @@
+/* ----------------------------------------------- */
+/* Toggle style*/
+.toggle__wrapper{
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  z-index: 999;
+}
+
+.toggle__wrapper .toggle__button{
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-surface-1dp);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle__button ion-icon{
+  color: var(--color-dark);
+  font-size: 20px;
+  position: absolute;
+  transition: transform .3s ease-in-out;
+}
+
+.toggle__wrapper .toggle__button:hover{
+  background-color: var(--color-dark);
+}
+.toggle__button:hover ion-icon{
+  color: var(--color-surface-1dp);
+  transform: rotate(180deg);
+}
+
+.toggle__button .light__icon{
+  opacity: 0;
+}
+
+.darkmode .toggle__button .light__icon{
+  opacity: 1;
+}
+.darkmode .toggle__button .dark__icon{
+  opacity: 0;
+}
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* Bubble background style */
+.bubbles__wrapper {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.bubbles__wrapper .bubble{
+  position: absolute;
+  box-shadow: 3px 5px 10px #0A0B1B1a;
+  border-radius: 20%;
+}
+
+.bubbles__wrapper .bubble__1dp{
+  background-color: var(--color-bubble-3dp);
+}
+.bubbles__wrapper .bubble__2dp{
+  background-color: var(--color-bubble-2dp);
+}
+.bubbles__wrapper .bubble__3dp{
+  background-color: var(--color-bubble-1dp);
+}
+
+.bubbles__wrapper .x1{
+  width: 80px;
+  height: 80px;
+  top: -2%;
+  right: 40%;
+  transform: rotate(20deg);
+}
+.bubbles__wrapper .x2{
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: -1%;
+  transform: rotate(50deg);
+}
+.bubbles__wrapper .x3{
+  width: 50px;
+  height: 50px;
+  top: 15%;
+  right: 5%;
+  transform: rotate(10deg);
+}
+
+.bubbles__wrapper .x4{
+  width: 50px;
+  height: 50px;
+  bottom: 20%;
+  right: 10%;
+  transform: rotate(45deg);
+}
+.bubbles__wrapper .x5{
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 2%;
+  transform: rotate(15deg);
+}
+.bubbles__wrapper .x6{
+  width: 60px;
+  height: 60px;
+  top: 70%;
+  left: 8%;
+  transform: rotate(15deg);
+}
+.bubbles__wrapper .x7{
+  width: 80px;
+  height: 80px;
+  top: 55%;
+  right: 5%;
+  transform: rotate(15deg);
+}
+
+.bubbles__wrapper .x8{
+  width: 100px;
+  height: 100px;
+  bottom: -5%;
+  left: 2%;
+  transform: rotate(80deg);
+}
+.bubbles__wrapper .x9{
+  width: 35px;
+  height: 35px;
+  bottom: 10%;
+  left: 40%;
+  transform: rotate(10deg);
+}
+.bubbles__wrapper .x10{
+  width: 80px;
+  height: 80px;
+  bottom: 5%;
+  right: -5%;
+  transform: rotate(60deg);
+}
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* Tablet Styles */
+@media screen and (min-width: 725px){
+  .bubbles__wrapper .x1{
+    width: 110px;
+    height: 110px;
+  }
+  .bubbles__wrapper .x2{
+    width: 130px;
+    height: 130px;
+  }
+  .bubbles__wrapper .x3{
+    width: 80px;
+    height: 80px;
+  }
+
+  .bubbles__wrapper .x4{
+    width: 80px;
+    height: 80px;
+  }
+  .bubbles__wrapper .x5{
+    width: 60px;
+    height: 60px;
+  }
+  .bubbles__wrapper .x6{
+    width: 90px;
+    height: 90px;
+  }
+  .bubbles__wrapper .x7{
+    width: 110px;
+    height: 110px;
+    top: 45%;
+    right: -5%;
+    transform: rotate(75deg);
+  }
+
+  .bubbles__wrapper .x8{
+    width: 130px;
+    height: 130px;
+    left: 3%;
+  }
+  .bubbles__wrapper .x9{
+    width: 65px;
+    height: 65px;    
+    bottom: 10%;
+    left: 50%;
+  }
+  .bubbles__wrapper .x10{
+    width: 100px;
+    height: 100px;
+    bottom: 2%;
+    right: -5%;
+  }
+}
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* Laptop style */
+@media screen and (min-width: 1024px){
+/* toggle style */
+  .toggle__wrapper{
+    top: 40px;
+    right: 60px;
+  }
+
+  .toggle__wrapper .toggle__button{
+    width: 50px;
+    height: 50px;
+  }
+
+  .toggle__button ion-icon{
+    font-size: 25px;
+  }
+
+  
+
+/* bubble style */
+  .bubbles__wrapper .x2{
+    top: 15%;
+  }
+
+  .bubbles__wrapper .x4{
+    top: 35%;
+    right: 20%;
+  }
+  .bubbles__wrapper .x5{
+    top: 40%;
+    left: 25%;
+  }
+  .bubbles__wrapper .x6{
+    top: unset;
+    bottom: 30%;
+    left: 15%;
+  }
+  .bubbles__wrapper .x7{
+    top: 65%;
+    right: 10%;
+  }
+
+  .bubbles__wrapper .x9{
+    width: 90px;
+    height: 90px;
+    bottom: 10%;
+    left: 40%;
+  }
+  .bubbles__wrapper .x10{
+    bottom: 2%;
+    right: -2%;
+  }
+}

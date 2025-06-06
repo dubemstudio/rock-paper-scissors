@@ -7,8 +7,9 @@
   <link rel="icon" href="image/logo.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="toggleBubble.css">
 </head>
-<body data-theme="">
+<body class="darkmkode">
   
   <div class="bubbles__wrapper">
     <div class="bubble x1 bubble__1dp"></div>
@@ -23,8 +24,11 @@
     <div class="bubble x10 bubble__3dp"></div>
   </div>
 
-  <header>
-    
+  <header class="toggle__wrapper">
+    <div id="toggleBtn" class="toggle__button">
+      <ion-icon class="light__icon" name="sunny"></ion-icon>
+      <ion-icon class="dark__icon" name="moon"></ion-icon>
+    </div>
   </header>
 
   <main class="modal__wrapper" role="dialog">
@@ -48,6 +52,6 @@
  
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

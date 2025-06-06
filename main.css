@@ -1,6 +1,10 @@
-/* Import Font  */
+/* ----------------------------------------------- */
+/* Imported Font  */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* ----------------------------------------------- */
 
+
+/* ----------------------------------------------- */
 /* Default Styles */
 *,
 *::after,
@@ -54,6 +58,19 @@ img{
   --font-size-xsm: 14px;
 }
 
+/* Dark Theme Colors style */
+.darkmode{
+  --color-primary: #5865F2;
+  --color-background: #0A0B1B;
+  --color-surface-1dp: #141636;
+  --color-surface-2dp: #3B43A1;
+  --color-bubble-1dp: #1D2251;
+  --color-bubble-2dp: #272D6C;
+  --color-bubble-3dp: #313886;
+  --color-light: #0A0B1B;
+  --color-dark: #ECEEFE;
+}
+
 @media screen and (min-width: 768px) {
   :root {
     --font-size-lg: 32px;
@@ -72,137 +89,22 @@ img{
   }
 }
 
-
-/* Dark Theme Colors style */
-[data-theme="dark"]{
-  --color-primary: #5865F2;
-  --color-background: #0A0B1B;
-  --color-surface-1dp: #141636;
-  --color-surface-2dp: #3B43A1;
-  --color-bubble-1dp: #1D2251;
-  --color-bubble-2dp: #272D6C;
-  --color-bubble-3dp: #313886;
-  --color-dark: #0A0B1B;
-  --color-light: #ECEEFE;
-}
-
-
 body{
   position: relative;
   background-color: var(--color-background);
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
 }
+/* ----------------------------------------------- */
 
 
-/* Bubble background style */
-.bubbles__wrapper {
-  position: absolute;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: -1;
-}
-
-
-.bubbles__wrapper .bubble{
-  position: absolute;
-  box-shadow: 3px 5px 10px #0A0B1B1a;
-  border-radius: 20%;
-}
-
-
-.bubbles__wrapper .bubble__1dp{
-  background-color: var(--color-bubble-3dp);
-}
-.bubbles__wrapper .bubble__2dp{
-  background-color: var(--color-bubble-2dp);
-}
-.bubbles__wrapper .bubble__3dp{
-  background-color: var(--color-bubble-1dp);
-}
-
-.bubbles__wrapper .x1{
-  width: 80px;
-  height: 80px;
-  top: -2%;
-  right: 40%;
-  transform: rotate(20deg);
-}
-.bubbles__wrapper .x2{
-  width: 100px;
-  height: 100px;
-  top: 20%;
-  left: -1%;
-  transform: rotate(50deg);
-}
-.bubbles__wrapper .x3{
-  width: 50px;
-  height: 50px;
-  top: 15%;
-  right: 5%;
-  transform: rotate(10deg);
-}
-
-.bubbles__wrapper .x4{
-  width: 50px;
-  height: 50px;
-  bottom: 20%;
-  right: 10%;
-  transform: rotate(45deg);
-}
-.bubbles__wrapper .x5{
-  width: 30px;
-  height: 30px;
-  top: 50%;
-  left: 2%;
-  transform: rotate(15deg);
-}
-.bubbles__wrapper .x6{
-  width: 60px;
-  height: 60px;
-  top: 70%;
-  left: 8%;
-  transform: rotate(15deg);
-}
-.bubbles__wrapper .x7{
-  width: 80px;
-  height: 80px;
-  top: 55%;
-  right: 5%;
-  transform: rotate(15deg);
-}
-
-.bubbles__wrapper .x8{
-  width: 100px;
-  height: 100px;
-  bottom: -5%;
-  left: 2%;
-  transform: rotate(80deg);
-}
-.bubbles__wrapper .x9{
-  width: 35px;
-  height: 35px;
-  bottom: 10%;
-  left: 40%;
-  transform: rotate(10deg);
-}
-.bubbles__wrapper .x10{
-  width: 80px;
-  height: 80px;
-  bottom: 5%;
-  right: -5%;
-  transform: rotate(60deg);
-}
-
-
+/* ----------------------------------------------- */
 /* Modal Styles */
 .modal__wrapper{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: var(--color-surface-1dp);
   width: 320px;
   height: 400px;
   border-radius: 30px;
@@ -212,18 +114,22 @@ body{
   align-items: center;
   padding: 30px;
   backdrop-filter: blur(30px);
+  background: var(--color-surface-1dp);
   background: transparent;
-  box-shadow: 10px 10px 20px #0000001a;
+  box-shadow: 0px 0px 30px #0000001a;
 }
+
 .modal__wrapper .modal__illustration{
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
 }
+
 .modal__wrapper .modal__image-wrapper{
   width: 250px;
 }
+
 .modal__wrapper .modal__title{
   display: block;
   font-family: var(--font-main);
@@ -232,6 +138,7 @@ body{
   font-size: var(--font-size-lg);
   color: var(--color-dark);
 }
+
 .modal__wrapper .modal__button{
   display: flex;
   justify-content: center;
@@ -253,136 +160,57 @@ body{
   letter-spacing: 2px;
   font-weight: 600;
 }
+
 .button__icon{
   transition: transform .5s ease-in-out;
 }
+
 .modal__wrapper .modal__button:hover{
   background-color: var(--color-surface-2dp);
 }
 .modal__button:hover .button__icon{
   transform: translateX(10px);
 }
+/* ----------------------------------------------- */
 
 
-
-
+/* ----------------------------------------------- */
+/* Mobile Large style */
 @media screen and (min-width: 425px){
   .modal__wrapper{
     width: 370px;
     height: 450px;
     padding: 50px 30px;
   }
+
   .modal__wrapper .modal__image-wrapper{
     width: 250px;
   }
 }  
+/* ----------------------------------------------- */
 
 
+/* ----------------------------------------------- */
+/* Tablet style */
 @media screen and (min-width: 725px){
-
-  .bubbles__wrapper .x1{
-    width: 110px;
-    height: 110px;
-  }
-  .bubbles__wrapper .x2{
-    width: 130px;
-    height: 130px;
-  }
-  .bubbles__wrapper .x3{
-    width: 80px;
-    height: 80px;
-  }
-
-  .bubbles__wrapper .x4{
-    width: 80px;
-    height: 80px;
-  }
-  .bubbles__wrapper .x5{
-    width: 60px;
-    height: 60px;
-  }
-  .bubbles__wrapper .x6{
-    width: 90px;
-    height: 90px;
-  }
-  .bubbles__wrapper .x7{
-    width: 110px;
-    height: 110px;
-    top: 45%;
-    right: -5%;
-    transform: rotate(75deg);
-  }
-
-  .bubbles__wrapper .x8{
-    width: 130px;
-    height: 130px;
-    left: 3%;
-  }
-  .bubbles__wrapper .x9{
-    width: 65px;
-    height: 65px;    
-    bottom: 10%;
-    left: 50%;
-  }
-  .bubbles__wrapper .x10{
-    width: 100px;
-    height: 100px;
-    bottom: 2%;
-    right: -5%;
-  }
-
-
   .modal__wrapper{
     width: 550px;
     height: 650px;
   }
+
   .modal__wrapper .modal__image-wrapper{
     width: 350px;
   }
+
   .modal__wrapper .modal__button{
     width: 220px;
     height: 70px;
     column-gap: 8px;
     transition: background-color .5s ease-in-out;
   }
+
+
   .modal__button .button__text{
     letter-spacing: 3px;
   }
 }  
-
-
-@media screen and (min-width: 1024px){
-  .bubbles__wrapper .x2{
-    top: 15%;
-  }
-
-  .bubbles__wrapper .x4{
-    top: 35%;
-    right: 20%;
-  }
-  .bubbles__wrapper .x5{
-    top: 40%;
-    left: 25%;
-  }
-  .bubbles__wrapper .x6{
-    top: unset;
-    bottom: 30%;
-    left: 15%;
-  }
-  .bubbles__wrapper .x7{
-    top: 65%;
-    right: 10%;
-  }
-
-  .bubbles__wrapper .x9{
-    width: 90px;
-    height: 90px;
-    bottom: 10%;
-    left: 40%;
-  }
-  .bubbles__wrapper .x10{
-    bottom: 2%;
-    right: -2%;
-  }
-}
-
