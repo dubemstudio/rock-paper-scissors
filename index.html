@@ -8,8 +8,10 @@
 
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="toggleBubble.css">
+
+  <script src="script.js" defer></script>
 </head>
-<body class="darkmkode">
+<body>
   
   <div class="bubbles__wrapper">
     <div class="bubble x1 bubble__1dp"></div>
@@ -34,9 +36,8 @@
   <main class="modal__wrapper" role="dialog">
     <div class="modal__illustration">
       <div class="modal__image-wrapper">
-        <img src="image/illustrationGroupLight.svg" alt="Rock, Paper, Scissors illustration">
+        <img id="illustration" src="image/illustrationGroupLight.svg" alt="Rock, Paper, Scissors illustration">
       </div>
-      
       
       <span class="modal__title">r-p-s</span>
     </div>
@@ -50,7 +51,7 @@
   
   
  
-  <script src="script.js"></script>
+  <!-- ionicons installation -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
