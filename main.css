@@ -52,8 +52,8 @@ input{
   --color-bubble-1dp: #C7CCFB;
   --color-bubble-2dp: #B5BBF9;
   --color-bubble-3dp: #A2A9F8;
-  --color-dark: #0A0B1B;
-  --color-light: #ECEEFE;
+  --color-black: #0A0B1B;
+  --color-white: #ECEEFE;
 
   /* Base font sizes (mobile-first) */
   --font-size-lg: 24px;
@@ -71,8 +71,8 @@ input{
   --color-bubble-1dp: #1D2251;
   --color-bubble-2dp: #272D6C;
   --color-bubble-3dp: #313886;
-  --color-light: #0A0B1B;
-  --color-dark: #ECEEFE;
+  --color-black: #0A0B1B;
+  --color-white: #ECEEFE;
 }
 
 @media screen and (min-width: 725px) {
@@ -142,7 +142,11 @@ body{
   text-transform: uppercase;
   font-weight: 600;
   font-size: var(--font-size-lg);
-  color: var(--color-dark);
+  color: var(--color-black);
+}
+
+.darkmode .modal__wrapper .modal__title{
+  color: var(--color-white);
 }
 
 .modal__wrapper .modal__button{
@@ -154,9 +158,13 @@ body{
   height: 50px;
   border-radius: 10px;
   column-gap: 8px;
-  color: var(--color-light);
+  color: var(--color-white);
   font-size: var(--font-size-md);
   transition: background-color .5s ease-in-out;
+}
+
+.darkmode .modal__button{
+  color: var(--color-white);
 }
 
 
@@ -235,17 +243,17 @@ body{
   width: 100px;
 }
 
-.modal__wrapper.signup{
+.modal__wrapper.signup__form{
   padding: 50px;
 }
 
-.signup .modal__content{
+.signup__form .modal__content{
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
 
-.signup .modal__content .input__title{
+.signup__form .modal__content .input__title{
   display: inline-block;
   text-transform: capitalize;
   color: var(--color-primary);
@@ -260,10 +268,14 @@ body{
   width: 250px;
   height: 50px;
   border-radius: 10px;
-  color: var(--color-light);
+  color: var(--color-white);
   font-family: var(--font-body);
   font-size: var(--font-size-sm);
   text-transform: capitalize;
+}
+
+.darkmode .modal__content .modal__input-box{
+  color: var(--color-white);
 }
 
 .modal__input-box label{
@@ -289,3 +301,4 @@ body{
 .modal__input-box input:placeholder-shown~label{
   opacity: 1;
 }
+

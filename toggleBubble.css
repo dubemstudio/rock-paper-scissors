@@ -21,18 +21,28 @@
 }
 
 .toggle__button ion-icon{
-  color: var(--color-dark);
+  color: var(--color-black);
   font-size: 20px;
   position: absolute;
   transition: transform .3s ease-in-out;
 }
 
 .toggle__wrapper .toggle__button:hover{
-  background-color: var(--color-dark);
+  background-color: var(--color-black);
 }
 .toggle__button:hover ion-icon{
   color: var(--color-surface-1dp);
   transform: rotate(180deg);
+}
+
+.darkmode .toggle__button ion-icon{
+  color: var(--color-white);
+}
+.darkmode .toggle__wrapper .toggle__button:hover{
+  background-color: var(--color-white);
+}
+.darkmode .toggle__button:hover ion-icon{
+  color: var(--color-black);
 }
 
 .toggle__button .light__icon{

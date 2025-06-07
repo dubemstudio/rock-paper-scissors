@@ -47,4 +47,19 @@
   
   
 /* ----------------------------------------------- */
-/* Toggle Theme */
+/* Get name */
+const form = document.querySelector('.signup__form');
+const nameInput = document.getElementById('name');
+
+form.addEventListener('submit', (e) =>{
+  e.preventDefault();
+
+  const playerName = nameInput.value.trim();
+
+  if (playerName){
+    localStorage.setItem('playerName', playerName);
+
+    window.location.href = 'game.html';
+  }
+})
+
