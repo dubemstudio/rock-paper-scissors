@@ -33,20 +33,28 @@
     </div>
   </header>
 
-  <main class="modal__wrapper" role="dialog">
-    <!-- <div class="modal__illustration">
-      <div class="modal__image-wrapper">
-        <img id="illustration" src="image/illustrationGroupLight.svg" alt="Rock, Paper, Scissors illustration">
-      </div>
-      
-      <span class="modal__title">r-p-s</span>
+  <form class="modal__wrapper signup" role="dialog">
+    <div class="modal__illustration-rps">
+      <img class="scissors" src="image/scissors.svg" alt="scissors">
+      <img class="paper" src="image/paper.svg" alt="paper">
+      <img class="rock" src="image/rock.svg" alt="rock">
     </div>
+
     
-      <button class="modal__button" onclick="location.href='signUp.html'">
-        <span class="button__text">next</span>
-        <ion-icon class="button__icon" name="arrow-forward"></ion-icon>
-      </button> -->
-  </main>
+    <div class="modal__content">
+      <span class="input__title">enter name</span>
+
+      <div class="modal__input-box">
+        <input id="name" type="text" placeholder="" required>
+        <label for="name">player</label>
+      </div>
+    </div>
+
+    
+    <button class="modal__button" type="submit">
+      <span class="button__text">play</span>
+    </button>
+  </form>
 
   
   

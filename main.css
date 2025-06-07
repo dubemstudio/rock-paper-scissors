@@ -35,6 +35,10 @@ img{
   max-width: 100%;
 }
 
+input{
+  all: unset;
+}
+
 :root {
   /* Font families */
   --font-main: "Space Mono", monospace;
@@ -71,7 +75,7 @@ img{
   --color-dark: #ECEEFE;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 725px) {
   :root {
     --font-size-lg: 32px;
     --font-size-md: 24px;
@@ -105,11 +109,12 @@ body{
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 320px;
-  height: 400px;
+  width: fit-content;
+  height: fit-content;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
+  row-gap: 60px;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
@@ -117,6 +122,7 @@ body{
   background: var(--color-surface-1dp);
   background: transparent;
   box-shadow: 0px 0px 30px #0000001a;
+  z-index: 999;
 }
 
 .modal__wrapper .modal__illustration{
@@ -178,8 +184,6 @@ body{
 /* Mobile Large style */
 @media screen and (min-width: 425px){
   .modal__wrapper{
-    width: 370px;
-    height: 450px;
     padding: 50px 30px;
   }
 
@@ -194,8 +198,7 @@ body{
 /* Tablet style */
 @media screen and (min-width: 725px){
   .modal__wrapper{
-    width: 550px;
-    height: 650px;
+    padding: 50px 40px;
   }
 
   .modal__wrapper .modal__image-wrapper{
@@ -214,3 +217,75 @@ body{
     letter-spacing: 3px;
   }
 }  
+/* ----------------------------------------------- */
+
+
+
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* Signup style */
+
+.modal__illustration-rps{
+  display: none;
+  width: 100%;
+  position: absolute;
+}
+
+.modal__illustration-rps img{
+  width: 100px;
+}
+
+.modal__wrapper.signup{
+  padding: 50px;
+}
+
+.signup .modal__content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.signup .modal__content .input__title{
+  display: inline-block;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+}
+
+.modal__content .modal__input-box{
+  position: relative;
+  background-color: var(--color-surface-2dp);
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  color: var(--color-light);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  text-transform: capitalize;
+}
+
+.modal__input-box label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: opacity .3s ease-in-out;
+}
+
+.modal__input-box input{
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.modal__input-box input:valid~label,
+.modal__input-box input:focus~label{
+  opacity: 0;
+}
+
+.modal__input-box input:placeholder-shown~label{
+  opacity: 1;
+}
