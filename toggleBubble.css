@@ -5,7 +5,7 @@
   top: 30px;
   right: 30px;
   display: flex;
-  z-index: 999;
+  z-index: 1;
 }
 
 .toggle__wrapper .toggle__button{
@@ -65,7 +65,7 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .bubbles__wrapper .bubble{

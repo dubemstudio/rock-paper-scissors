@@ -120,9 +120,10 @@ body{
   padding: 30px;
   backdrop-filter: blur(30px);
   background: var(--color-surface-1dp);
-  background: transparent;
+  /* background: transparent; */
+  /* position: relative; */
   box-shadow: 0px 0px 30px #0000001a;
-  z-index: 999;
+  z-index: 0;
 }
 
 .modal__wrapper .modal__illustration{
@@ -232,7 +233,6 @@ body{
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* Signup style */
-
 .modal__illustration-rps{
   display: none;
   width: 100%;
@@ -267,6 +267,7 @@ body{
   background-color: var(--color-surface-2dp);
   width: 250px;
   height: 50px;
+  padding: 0 20px;
   border-radius: 10px;
   color: var(--color-white);
   font-family: var(--font-body);
@@ -290,7 +291,6 @@ body{
 .modal__input-box input{
   width: 100%;
   height: 100%;
-  padding: 0 20px;
 }
 
 .modal__input-box input:valid~label,
@@ -301,4 +301,53 @@ body{
 .modal__input-box input:placeholder-shown~label{
   opacity: 1;
 }
+/* ----------------------------------------------- */
 
+
+/* ----------------------------------------------- */
+/* Tablet style */
+@media screen and (min-width: 725px){
+  .modal__illustration-rps{
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .modal__illustration-rps img{
+    position: absolute;
+    width: 100px;
+  }
+
+  .modal__illustration-rps .rock{
+    bottom: -40px;
+    left: 20px;
+  }
+  .modal__illustration-rps .paper{
+    top: 150px;
+    right: -80px;
+    transform: rotate(25deg);
+  } 
+  .modal__illustration-rps .scissors{
+    top: -100px;
+    left: 200px;
+    transform: rotate(-15deg);
+  } 
+    
+
+  .modal__wrapper.signup__form{
+    padding: 70px 80px;
+  }
+
+  .signup__form .modal__content{
+    row-gap: 10px;
+  }
+  .modal__content .modal__input-box{
+    width: 400px;
+    height: 80px;
+  }
+  
+}
