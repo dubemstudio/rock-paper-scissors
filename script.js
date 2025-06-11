@@ -50,16 +50,39 @@
 /* Get name */
 const form = document.querySelector('.signup__form');
 const nameInput = document.getElementById('name');
+if (form){
+  form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+  
+    const playerName = nameInput.value.trim();
+  
+    if (playerName){
+      localStorage.setItem('playerName', playerName);
+  
+      window.location.href = 'game.html';
+    }
+  })
+}
+/* ----------------------------------------------- */
+  
+  
+/* ----------------------------------------------- */
+/* display name */
+const displayName = document.getElementById('displayName');
+const playerName = localStorage.getItem('playerName') || "Guest";
 
-form.addEventListener('submit', (e) =>{
-  e.preventDefault();
+if (displayName){
+  displayName.textContent = playerName;
+} 
+/* ----------------------------------------------- */
+  
+  
+/* ----------------------------------------------- */
+/* display scores */
+const displayScore = document.getElementById('scoreValue');
+let playerScore = 0;
+let botScore = 0;
 
-  const playerName = nameInput.value.trim();
-
-  if (playerName){
-    localStorage.setItem('playerName', playerName);
-
-    window.location.href = 'game.html';
-  }
-})
-
+if (displayScore){
+  displayScore.textContent = `${playerScore} : ${botScore}`
+}

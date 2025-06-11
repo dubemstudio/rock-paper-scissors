@@ -122,7 +122,7 @@ body{
   background: var(--color-surface-1dp);
   /* background: transparent; */
   /* position: relative; */
-  box-shadow: 0px 0px 30px #0000001a;
+  box-shadow: 0px 0px 30px #00000026;
   z-index: 0;
 }
 
