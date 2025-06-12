@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="game.css" />
 
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -54,8 +56,37 @@
         </button>
       </div>
     </header>
-    <section></section>
-    <section></section>
+
+    <section class="game__expression">
+      <span class="expression__wrapper player__expression">
+        <img id="playerExpression" src="" alt="player expression">
+      </span>
+      <span class="expression__wrapper bot__expression">
+        <img id="botExpression" src="" alt="bot expression">
+      </span>
+    </section>
+
+    <section class="footer__deck">
+      <button class="nav__deck">
+        <ion-icon name="ice-cream"></ion-icon>
+      </button>
+
+      <div class="option__deck">
+        <button class="option__button option__button--paper">
+          <img src="image/paper.png" alt="">
+        </button>
+        <button class="option__button option__button--rock">
+          <img src="image/rock.png" alt="">
+        </button>
+        <button class="option__button option__button--scissors">
+          <img src="image/scissors.png" alt="">
+        </button>
+      </div>
+
+      <button class="nav__deck">
+        <ion-icon name="flame"></ion-icon>
+      </button>
+    </section>
   </main>
 
   <!-- ionicons installation -->

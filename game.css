@@ -1,13 +1,11 @@
 
-/* span{
-  display: block;
-} */
 
 .main__wrapper{
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 20px 10px 30px;
 }
 /* ----------------------------------------------- */
 
@@ -158,4 +156,58 @@
 }
 .darkmode .toggle__button .light__icon{
   opacity: 1;
+}
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* expression style*/
+.game__expression{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game__expression .expression__wrapper{
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+
+.expression__wrapper.bot__expression img{
+  transform: rotate(-90deg);
+}
+.expression__wrapper.player__expression img{
+  transform: rotate(90deg); 
+}
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* deck style*/
+.footer__deck{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__deck .nav__deck{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-surface-1dp);
+  color: var(--color-black);
+  border-radius: 8px;
+  font-size: 30px;
+  box-shadow: 0px 0px 30px #00000026;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option__deck {
+  width: 200px;
+  height: 80px;
+  background-color: var(--color-surface-1dp);
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px #00000026;
 }
