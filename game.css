@@ -92,20 +92,15 @@
 } 
 
 .header__nav .rules__button{
-  width: fit-content;
-  height: fit-content;
-  padding: 1px 0;
   width: 40px;
   height: 40px;
+  padding: 1px 0;
   background-color: var(--color-surface-1dp);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--color-primary);
-  font-family: var(--font-body);
-  text-transform: uppercase;
-  font-size: var(--font-size-xsm);
   cursor: pointer;
 }
 
@@ -203,7 +198,7 @@
   height: 50px;
   background-color: var(--color-surface-1dp);
   color: var(--color-primary);
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 30px;
   box-shadow: 0px 0px 30px #00000026;
   display: flex;
@@ -216,7 +211,7 @@
   width: 220px;
   height: 80px;
   background-color: var(--color-surface-1dp);
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0px 0px 30px #00000026;
   display: flex;
   justify-content: space-between;
@@ -228,5 +223,46 @@
   width: 30%;
   cursor: pointer;
 }
+/* ----------------------------------------------- */
 
 
+/* ----------------------------------------------- */
+/* mobile large style*/
+@media screen and (min-width: 425px){
+  .header__wrapper .header__info{
+    width: 280px;
+    height: 70px;
+  }
+  .header__info .players__info{
+    column-gap: 10px;
+  }
+  .players__info .player__name{
+    row-gap: 3px;
+  }
+
+  .header__info .score__info{
+    row-gap: 10px;
+  }
+  .header__wrapper .header__nav{
+    column-gap: 20px;
+  }
+
+  
+  .game__expression .expression__wrapper{
+    width: 180px;
+    height: 180px;
+  }
+
+
+  .footer__deck .nav__deck{
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+  }
+
+  .option__deck {
+    width: 260px;
+    height: 100px;
+    padding: 15px;
+  }
+}  
