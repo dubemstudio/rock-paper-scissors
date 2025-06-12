@@ -95,8 +95,8 @@
   width: fit-content;
   height: fit-content;
   padding: 1px 0;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: var(--color-surface-1dp);
   border-radius: 10px;
   display: flex;
@@ -119,8 +119,8 @@
 }
 
 .toggle__wrapper .toggle__button{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: var(--color-surface-1dp);
   border-radius: 10px;
   display: flex;
