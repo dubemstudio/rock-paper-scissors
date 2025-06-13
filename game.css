@@ -88,13 +88,12 @@
 .header__wrapper .header__nav{
   display: flex;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 5px;
 } 
 
 .header__nav .rules__button{
   width: 40px;
   height: 40px;
-  padding: 1px 0;
   background-color: var(--color-surface-1dp);
   border-radius: 10px;
   display: flex;
@@ -223,12 +222,138 @@
   width: 30%;
   cursor: pointer;
 }
+
+
+
+
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* mobile regular style*/
+@media screen and (min-width: 375px){
+  .header__wrapper .header__nav{
+    column-gap: 10px;
+  }
+}  
+
 /* ----------------------------------------------- */
 
 
 /* ----------------------------------------------- */
 /* mobile large style*/
-@media screen and (min-width: 425px){
+ @media screen and (min-width: 414px){
+  .header__wrapper .header__info{
+    width: 280px;
+    height: 70px;
+  }
+  .header__info .players__info{
+    column-gap: 10px;
+  }
+  .players__info .player__name{
+    row-gap: 3px;
+  }
+
+  .header__info .score__info{
+    row-gap: 10px;
+  }
+  .header__wrapper .header__nav{
+    column-gap: 15px;
+  }
+
+  
+  .game__expression .expression__wrapper{
+    width: 180px;
+    height: 180px;
+  }
+
+
+  .footer__deck .nav__deck{
+    width: 60px;
+    height: 60px;
+  }
+
+  .option__deck {
+    width: 240px;
+    height: 100px;
+    padding: 15px;
+  }
+}  
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* mobile larger style*/
+ @media screen and (min-width: 475px){
+  .main__wrapper{
+    padding: 20px 20px 30px;
+  }
+
+  .header__wrapper .header__info{
+    width: 300px;
+    height: 70px;
+    padding: 10px 15px;
+  }
+  .header__info .players__info{
+    column-gap: 10px;
+  }
+  .players__info .player__name{
+    row-gap: 3px;
+  }
+
+  .header__info .score__info{
+    row-gap: 10px;
+  }
+  .header__wrapper .header__nav{
+    column-gap: 20px;
+  }
+
+  .header__nav .rules__button{
+    width: 50px;
+    height: 50px;
+  }
+
+  .rules__button ion-icon{
+    font-size: 25px;
+  }
+
+  .toggle__wrapper .toggle__button{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .toggle__button ion-icon{
+    font-size: 25px;
+  }
+  
+  .game__expression .expression__wrapper{
+    width: 180px;
+    height: 180px;
+  }
+
+
+  .footer__deck .nav__deck{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .option__deck {
+    width: 280px;
+    height: 100px;
+    padding: 10px 20px;
+  }
+}   
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* mobile large style*/
+@media screen and (min-width: 725px){
+  .main__wrapper{
+    padding: 20px 10px 30px;
+  }
   .header__wrapper .header__info{
     width: 280px;
     height: 70px;
@@ -266,3 +391,5 @@
     padding: 15px;
   }
 }  
+
+
