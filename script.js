@@ -78,11 +78,28 @@ if (displayName){
   
   
 /* ----------------------------------------------- */
-/* display scores */
+/* game interaction */
+// score board
 const displayScore = document.getElementById('scoreValue');
+// game expression
+const playerExp = document.getElementById('playerExpression');
+const botExp = document.getElementById('botExpression');
+// bottuns r-p-s
+const optionRock = document.getElementById('optionRock');
+const optionPaper = document.getElementById('optionPaper');
+const optionScissors = document.getElementById('optionScissors');
+// scores
 let playerScore = 0;
 let botScore = 0;
 
 if (displayScore){
   displayScore.textContent = `${playerScore} : ${botScore}`
 }
+
+if (playerExp && botExp){
+  playerExp.classList.add('no__rotate');
+  botExp.classList.add('no__rotate');
+  playerExp.src = 'image/playerAvatar.png';
+  botExp.src = 'image/botAvatar.png';
+}
+

@@ -75,7 +75,7 @@ input{
   --color-white: #ECEEFE;
 }
 
-@media screen and (min-width: 725px) {
+@media screen and (min-width: 600px) {
   :root {
     --font-size-lg: 32px;
     --font-size-md: 24px;
