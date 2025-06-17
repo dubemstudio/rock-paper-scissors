@@ -107,10 +107,14 @@ if (displayScore){
 // }
 
 function move(move){
-  botMove();
-  playerMove(move);
+  const bot = botMove();
+  const player = playerMove(move);
+  const result = calculation(player, bot);
+
+
 }
 
+// bot move function
 function botMove(){
   const randNum = Math.random();
   if(botExp){
@@ -119,41 +123,49 @@ function botMove(){
   
   let botMove = '';
   
-  if(randNum >= 0 && randNum < 1/3){
+  if(randNum < 1/3){
     botMove = 'rock';
     botExp.src = 'image/rock.png';
-  } else if(randNum >= 1/3 && randNum < 2/3){
+  } else if(randNum < 2/3){
     botMove = 'paper';
     botExp.src = 'image/paper.png';
-  } else if(randNum >= 2/3 && randNum < 1){
+  } else{
     botMove = 'scissors';
     botExp.src = 'image/scissors.png';
   }
+  
+  return botMove;
 } 
 
+
+// player move function
 function playerMove(option){
 
   if(playerExp){
     playerExp.classList.remove('no__rotate');
   }
   
-  let playerMove = option;
-  
-  if(playerMove === 'rock'){
-    playerExp.src = 'image/rock.png';
-  } else if(playerMove === 'paper'){
-    playerExp.src = 'image/paper.png';
-  } else if(playerMove === 'scissors'){
-    playerExp.src = 'image/scissors.png';
-  }
+  playerExp.src = `image/${option}.png`;
 
+  return option;
 } 
 
+// result function
 function calculation(player, bot){
-  player = playerMove(option);
-  bot = botMove();
+  let result;
 
-  if 
+  if(player === bot){
+    result = 0;
+  } else if(  (player === 'rock' && bot === 'scissors') ||
+              (player === 'paper' && bot === 'rock') ||
+              (player === 'scissors' && bot === 'paper')
+          ){
+      result = 1;
+  } else {
+    result = 2;
+  }
+  
+  return result;
 }
 
 
