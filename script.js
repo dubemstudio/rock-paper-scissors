@@ -89,29 +89,32 @@ const optionRock = document.getElementById('optionRock');
 const optionPaper = document.getElementById('optionPaper');
 const optionScissors = document.getElementById('optionScissors');
 // scores
-let playerScore = 0;
-let botScore = 0;
+let playerScore = localStorage.getItem('playerScore') || 0;
+let botScore = localStorage.getItem('botScore') || 0;
+
 
 if (displayScore){
   displayScore.textContent = `${playerScore} : ${botScore}`; 
 };
 
 
-// function moveWait() {
-//   if (playerExp && botExp){
-//     playerExp.classList.add('no__rotate');
-//     botExp.classList.add('no__rotate');
-//     playerExp.src = 'image/playerAvatar.png';
-//     botExp.src = 'image/botAvatar.png';
-//   };
-// }
-
 function move(move){
   const bot = botMove();
   const player = playerMove(move);
   const result = calculation(player, bot);
+  
+  if(result === 0){
+    displayScore.textContent = `${playerScore} : ${botScore}`; 
+  } else if (result === 1){
+    playerScore++
+      displayScore.textContent = `${playerScore} : ${botScore}`; 
+  } else if (result === 2){
+    botScore++
+    displayScore.textContent = `${playerScore} : ${botScore}`; 
+  }
 
-
+  localStorage.setItem('playerScore', playerScore);
+  localStorage.setItem('botScore', botScore);
 }
 
 // bot move function
