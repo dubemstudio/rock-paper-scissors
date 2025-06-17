@@ -58,7 +58,7 @@
 
 .players__info .player__name .name{
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: 400;
 }
 .players__info .player__name .title{
   font-size: var(--font-size-xsm);
@@ -75,12 +75,12 @@
 
 .header__info .score__info .title{
   font-size: var(--font-size-xsm);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .header__info .score__info .value{
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .header__info .score__info span{
@@ -185,8 +185,8 @@
   transform: rotate(90deg); 
 }
 
-#playerExpression,
-#botExpression{
+#playerExpression.no__rotate,
+#botExpression.no__rotate{
   transform: rotate(0deg);
 }
 /* ----------------------------------------------- */

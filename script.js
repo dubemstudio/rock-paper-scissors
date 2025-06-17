@@ -93,13 +93,67 @@ let playerScore = 0;
 let botScore = 0;
 
 if (displayScore){
-  displayScore.textContent = `${playerScore} : ${botScore}`
+  displayScore.textContent = `${playerScore} : ${botScore}`; 
+};
+
+
+// function moveWait() {
+//   if (playerExp && botExp){
+//     playerExp.classList.add('no__rotate');
+//     botExp.classList.add('no__rotate');
+//     playerExp.src = 'image/playerAvatar.png';
+//     botExp.src = 'image/botAvatar.png';
+//   };
+// }
+
+function move(move){
+  botMove();
+  playerMove(move);
 }
 
-if (playerExp && botExp){
-  playerExp.classList.add('no__rotate');
-  botExp.classList.add('no__rotate');
-  playerExp.src = 'image/playerAvatar.png';
-  botExp.src = 'image/botAvatar.png';
+function botMove(){
+  const randNum = Math.random();
+  if(botExp){
+    botExp.classList.remove('no__rotate');
+  }
+  
+  let botMove = '';
+  
+  if(randNum >= 0 && randNum < 1/3){
+    botMove = 'rock';
+    botExp.src = 'image/rock.png';
+  } else if(randNum >= 1/3 && randNum < 2/3){
+    botMove = 'paper';
+    botExp.src = 'image/paper.png';
+  } else if(randNum >= 2/3 && randNum < 1){
+    botMove = 'scissors';
+    botExp.src = 'image/scissors.png';
+  }
+} 
+
+function playerMove(option){
+
+  if(playerExp){
+    playerExp.classList.remove('no__rotate');
+  }
+  
+  let playerMove = option;
+  
+  if(playerMove === 'rock'){
+    playerExp.src = 'image/rock.png';
+  } else if(playerMove === 'paper'){
+    playerExp.src = 'image/paper.png';
+  } else if(playerMove === 'scissors'){
+    playerExp.src = 'image/scissors.png';
+  }
+
+} 
+
+function calculation(player, bot){
+  player = playerMove(option);
+  bot = botMove();
+
+  if 
 }
+
 
