@@ -106,14 +106,14 @@ function homeReset(){
   window.location.href = 'index.html';
 }
 
-function scoreReset(){
-  localStorage.removeItem('playerScore');
-  localStorage.removeItem('botScore');
+// function scoreReset(){
+//   localStorage.removeItem('playerScore');
+//   localStorage.removeItem('botScore');
 
-  if (displayScore){
-    displayScore.textContent = `${playerScore} : ${botScore}`; 
-  };
-}
+//   if (displayScore){
+//     displayScore.textContent = `${playerScore} : ${botScore}`; 
+//   };
+// }
 
 function move(move){
   const bot = botMove();
