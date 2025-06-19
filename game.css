@@ -109,7 +109,6 @@
   font-size: 20px;
 }
 
-
 .header__nav .toggle__wrapper{
   display: flex;
 }
@@ -133,22 +132,9 @@
   transition: transform .3s ease-in-out;
 }
 
-.toggle__wrapper .toggle__button:hover{
-  background-color: var(--color-black);
-}
-.toggle__button:hover ion-icon{
-  color: var(--color-surface-1dp);
-  transform: rotate(180deg);
-}
 
 .darkmode .toggle__button ion-icon{
   color: var(--color-white);
-}
-.darkmode .toggle__wrapper .toggle__button:hover{
-  background-color: var(--color-white);
-}
-.darkmode .toggle__button:hover ion-icon{
-  color: var(--color-black);
 }
 
 .toggle__button .light__icon{
@@ -183,11 +169,6 @@
 }
 .expression__wrapper.player__expression img{
   transform: rotate(90deg); 
-}
-
-#playerExpression.no__rotate,
-#botExpression.no__rotate{
-  transform: rotate(0deg);
 }
 /* ----------------------------------------------- */
 
@@ -354,7 +335,6 @@
   }
 
   
-
   .footer__deck .nav__deck{
     width: 60px;
     height: 60px;
@@ -388,6 +368,11 @@
     width: 50px;
   }
 }  
+/* ----------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* desktop style*/
 @media screen and (min-width: 1024px){
   .main__wrapper{
     padding: 30px 20px 50px;
@@ -395,6 +380,48 @@
 
   .header__wrapper{
     max-width: 1360px;
+  }
+
+  .header__nav .rules__button:hover{
+    background-color: var(--color-black);    
+  }
+  .header__nav .rules__button:hover ion-icon{
+    color: var(--color-surface-1dp);
+  }
+  .darkmode .header__nav .rules__button:hover{
+    background-color: var(--color-white);    
+  }
+  .darkmode .header__nav .rules__button:hover ion-icon{
+    color: var(--color-black);
+  }
+
+
+  .option__button:hover img{
+    transform: translateY(-30px);
+  }
+
+
+  .footer__deck .nav__deck:hover{
+    background-color: var(--color-black);
+    color: var(--color-surface-1dp);
+  }
+  .darkmode .footer__deck .nav__deck:hover{
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+  
+  .toggle__wrapper .toggle__button:hover{
+    background-color: var(--color-black);
+  }
+  .toggle__button:hover ion-icon{
+    color: var(--color-surface-1dp);
+    transform: rotate(180deg);
+  }
+  .darkmode .toggle__wrapper .toggle__button:hover{
+    background-color: var(--color-white);
+  }
+  .darkmode .toggle__button:hover ion-icon{
+    color: var(--color-black);
   }
 
   .game__expression,
@@ -409,10 +436,13 @@
 
   
   .footer__deck .nav__deck{
-    width: 70px;
-    height: 70px;
-    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
   }
+  .option__deck {
+    height: 150px;
+  } 
 }  
 
 

@@ -98,6 +98,23 @@ if (displayScore){
 };
 
 
+function homeReset(){
+  localStorage.removeItem('playerScore');
+  localStorage.removeItem('botScore');
+  localStorage.removeItem('playerName');
+
+  window.location.href = 'index.html';
+}
+
+function scoreReset(){
+  localStorage.removeItem('playerScore');
+  localStorage.removeItem('botScore');
+
+  if (displayScore){
+    displayScore.textContent = `${playerScore} : ${botScore}`; 
+  };
+}
+
 function move(move){
   const bot = botMove();
   const player = playerMove(move);
