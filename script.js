@@ -91,6 +91,9 @@ const optionScissors = document.getElementById('optionScissors');
 // scores
 let playerScore = localStorage.getItem('playerScore') || 0;
 let botScore = localStorage.getItem('botScore') || 0;
+// navigations
+const scoreReset = document.getElementById('scoreReset');
+const homeReset = document.getElementById('homeReset'); 
 
 
 if (displayScore){
@@ -98,22 +101,34 @@ if (displayScore){
 };
 
 
-function homeReset(){
-  localStorage.removeItem('playerScore');
-  localStorage.removeItem('botScore');
-  localStorage.removeItem('playerName');
 
-  window.location.href = 'index.html';
+if(homeReset){
+  homeReset.addEventListener('click', () =>{
+    localStorage.removeItem('playerScore', 0);
+    localStorage.removeItem('botScore', 0);
+
+    localStorage.removeItem('playerName');
+
+    window.location.href = 'index.html';
+  })
 }
 
-// function scoreReset(){
-//   localStorage.removeItem('playerScore');
-//   localStorage.removeItem('botScore');
+if(scoreReset){
+  scoreReset.addEventListener('click', () =>{
+    localStorage.setItem('playerScore', 0);
+    localStorage.setItem('botScore', 0);
 
-//   if (displayScore){
-//     displayScore.textContent = `${playerScore} : ${botScore}`; 
-//   };
-// }
+    playerScore = localStorage.getItem('playerScore') || 0;
+    botScore = localStorage.getItem('botScore') || 0;
+
+
+    playerExp.src = 'image/rock.png';
+    botExp.src = 'image/rock.png';
+
+    displayScore.textContent = `${playerScore} : ${botScore}`; 
+  })
+
+}
 
 function move(move){
   const bot = botMove();
@@ -137,9 +152,7 @@ function move(move){
 // bot move function
 function botMove(){
   const randNum = Math.random();
-  if(botExp){
-    botExp.classList.remove('no__rotate');
-  }
+
   
   let botMove = '';
   
@@ -160,10 +173,6 @@ function botMove(){
 
 // player move function
 function playerMove(option){
-
-  if(playerExp){
-    playerExp.classList.remove('no__rotate');
-  }
   
   playerExp.src = `image/${option}.png`;
 
