@@ -156,6 +156,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .game__expression .expression__wrapper{
@@ -169,6 +170,20 @@
 }
 .expression__wrapper.player__expression img{
   transform: rotate(90deg); 
+}
+
+.game__expression .expression__score{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+
 }
 /* ----------------------------------------------- */
 

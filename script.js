@@ -95,17 +95,16 @@ let botScore = localStorage.getItem('botScore') || 0;
 const scoreReset = document.getElementById('scoreReset');
 const homeReset = document.getElementById('homeReset'); 
 
-
-if (displayScore){
+function scoreUpdate(){
   displayScore.textContent = `${playerScore} : ${botScore}`; 
-};
+}
 
-
+scoreUpdate();
 
 if(homeReset){
   homeReset.addEventListener('click', () =>{
-    localStorage.removeItem('playerScore', 0);
-    localStorage.removeItem('botScore', 0);
+    localStorage.removeItem('playerScore');
+    localStorage.removeItem('botScore');
 
     localStorage.removeItem('playerName');
 
@@ -125,7 +124,7 @@ if(scoreReset){
     playerExp.src = 'image/rock.png';
     botExp.src = 'image/rock.png';
 
-    displayScore.textContent = `${playerScore} : ${botScore}`; 
+    scoreUpdate();
   })
 
 }
@@ -136,13 +135,13 @@ function move(move){
   const result = calculation(player, bot);
   
   if(result === 0){
-    displayScore.textContent = `${playerScore} : ${botScore}`; 
+    scoreUpdate(); 
   } else if (result === 1){
     playerScore++
-      displayScore.textContent = `${playerScore} : ${botScore}`; 
+    scoreUpdate(); 
   } else if (result === 2){
     botScore++
-    displayScore.textContent = `${playerScore} : ${botScore}`; 
+    scoreUpdate(); 
   }
 
   localStorage.setItem('playerScore', playerScore);
@@ -153,7 +152,6 @@ function move(move){
 function botMove(){
   const randNum = Math.random();
 
-  
   let botMove = '';
   
   if(randNum < 1/3){
@@ -169,7 +167,6 @@ function botMove(){
   
   return botMove;
 } 
-
 
 // player move function
 function playerMove(option){

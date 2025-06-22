@@ -44,11 +44,11 @@
       </div>
 
       <div class="header__nav">
-        <button class="rules__button">
+        <button class="rules__button" aria-label="View Rules">
           <ion-icon name="book"></ion-icon>
         </button>
 
-        <buttton class="toggle__wrapper">
+        <button class="toggle__wrapper" aria-label="Toggle theme">
           <div id="toggleBtn" class="toggle__button">
             <ion-icon class="light__icon" name="sunny"></ion-icon>
             <ion-icon class="dark__icon" name="moon"></ion-icon>
@@ -61,29 +61,30 @@
       <span class="expression__wrapper player__expression">
         <img id="playerExpression" src="image/rock.png" alt="player expression">
       </span>
+      <div id="expression__score" class="expression__score">tie</div>
       <span class="expression__wrapper bot__expression">
         <img id="botExpression" src="image/rock.png" alt="bot expression">
       </span>
     </section>
 
     <section class="footer__deck">
-      <button id="homeReset" class="nav__deck">
+      <button id="homeReset" class="nav__deck" aria-label="Reset to home">
         <ion-icon name="home"></ion-icon>
       </button>
 
       <div class="option__deck">
-        <button id="optionPaper" onclick="move('paper');" class="option__button option__button--paper">
+        <button id="optionPaper" onclick="move('paper');" class="option__button option__button--paper" aria-label="Option paper">
           <img src="image/paper.png" alt="">
         </button>
-        <button id="optionRock" onclick="move('rock');" class="option__button option__button--rock">
+        <button id="optionRock" onclick="move('rock');" class="option__button option__button--rock" aria-label="Option rock">
           <img src="image/rock.png" alt="">
         </button>
-        <button id="optionScissors" onclick="move('scissors');" class="option__button option__button--scissors">
+        <button id="optionScissors" onclick="move('scissors');" class="option__button option__button--scissors" aria-label="Option scissors">
           <img src="image/scissors.png" alt="">
         </button>
       </div>
 
-      <button id="scoreReset" class="nav__deck">
+      <button id="scoreReset" class="nav__deck" aria-label="Reset score">
         <ion-icon name="planet"></ion-icon>
       </button>
     </section>
