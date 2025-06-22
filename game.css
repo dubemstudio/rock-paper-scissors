@@ -166,7 +166,7 @@
 }
 
 .expression__wrapper.bot__expression img{
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) rotateY(180deg);
 }
 .expression__wrapper.player__expression img{
   transform: rotate(90deg); 
@@ -238,6 +238,7 @@
   width: auto;
   object-fit: contain;
   max-width: 100%;
+  pointer-events: none;
 }
 
 

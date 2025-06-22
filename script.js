@@ -85,6 +85,7 @@ const displayScore = document.getElementById('scoreValue');
 const playerExp = document.getElementById('playerExpression');
 const botExp = document.getElementById('botExpression');
 // bottuns r-p-s
+const buttons = document.querySelectorAll('.option__button');
 const optionRock = document.getElementById('optionRock');
 const optionPaper = document.getElementById('optionPaper');
 const optionScissors = document.getElementById('optionScissors');
@@ -94,6 +95,8 @@ let botScore = localStorage.getItem('botScore') || 0;
 // navigations
 const scoreReset = document.getElementById('scoreReset');
 const homeReset = document.getElementById('homeReset'); 
+// animation option array
+const options = ['rock', 'paper', 'scissors'];
 
 function scoreUpdate(){
   displayScore.textContent = `${playerScore} : ${botScore}`; 
@@ -129,7 +132,25 @@ if(scoreReset){
 
 }
 
+function enableButton(){
+  buttons.forEach(btn => btn.disabled = false);
+}
+
+function disableButton(){
+  buttons.forEach(btn => btn.disabled = true);
+}
+
+// function playShootAnimation(playerExp, botExp, options, duration = 2000, intervalTime = 150) {
+//   return new Promise((resolve) => {
+
+
+// }
+
+
 function move(move){
+
+  // disableButton();
+
   const bot = botMove();
   const player = playerMove(move);
   const result = calculation(player, bot);
@@ -146,6 +167,8 @@ function move(move){
 
   localStorage.setItem('playerScore', playerScore);
   localStorage.setItem('botScore', botScore);
+
+  // enableButton();
 }
 
 // bot move function
