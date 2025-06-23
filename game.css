@@ -232,6 +232,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+}
+.option__deck .option__button:disabled{
+  opacity: .5;
+  transform: scale(.8);
 }
 .option__button img {
   height: 100%;

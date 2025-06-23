@@ -9,6 +9,8 @@ const displayScore = document.getElementById('scoreValue');
 // game expression
 const playerExp = document.getElementById('playerExpression');
 const botExp = document.getElementById('botExpression');
+const scoreExp = document.getElementById('expression__score');
+const gameExp = document.getElementById('game__expression');
 // bottuns r-p-s
 const buttons = document.querySelectorAll('.option__button');
 const optionRock = document.getElementById('optionRock');
@@ -22,6 +24,7 @@ const scoreReset = document.getElementById('scoreReset');
 const homeReset = document.getElementById('homeReset'); 
 // animation option array
 const options = ['rock', 'paper', 'scissors'];
+
 
 function scoreUpdate(){
   displayScore.textContent = `${playerScore} : ${botScore}`; 
@@ -65,36 +68,40 @@ function disableButton(){
   buttons.forEach(btn => btn.disabled = true);
 }
 
-// function playShootAnimation(playerExp, botExp, options, duration = 2000, intervalTime = 150) {
-//   return new Promise((resolve) => {
-
-
-// }
 
 
 function move(move){
+  disableButton();
+  gameExp.classList.add('start');
 
-  // disableButton();
+  let time = setTimeout(() =>{
+    gameExp.classList.remove('start');
 
-  const bot = botMove();
-  const player = playerMove(move);
-  const result = calculation(player, bot);
-  
-  if(result === 0){
-    scoreUpdate(); 
-  } else if (result === 1){
-    playerScore++
-    scoreUpdate(); 
-  } else if (result === 2){
-    botScore++
-    scoreUpdate(); 
-  }
+    const bot = botMove();
+    const player = playerMove(move);
+    const result = calculation(player, bot);
+    
+    if(result === 0){
+      scoreUpdate(); 
+    } else if (result === 1){
+      playerScore++
+      scoreUpdate(); 
+    } else if (result === 2){
+      botScore++
+      scoreUpdate(); 
+    }
 
-  localStorage.setItem('playerScore', playerScore);
-  localStorage.setItem('botScore', botScore);
+    localStorage.setItem('playerScore', playerScore);
+    localStorage.setItem('botScore', botScore);
 
-  // enableButton();
+    enableButton();
+  },2500)
+
+
 }
+
+
+
 
 // bot move function
 function botMove(){
