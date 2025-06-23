@@ -24,6 +24,10 @@ const scoreReset = document.getElementById('scoreReset');
 const homeReset = document.getElementById('homeReset'); 
 // animation option array
 const options = ['rock', 'paper', 'scissors'];
+// rule toggle
+const rulesOpen = document.getElementById('rulesOpen');
+const rulesClose = document.getElementById('rulesClose');
+const rulesDialog = document.getElementById('rulesDialog');
 
 
 function scoreUpdate(){
@@ -165,5 +169,16 @@ function calculation(player, bot){
   
   return result;
 }
+
+
+
+rulesOpen.addEventListener('click', () =>{
+  rulesDialog.classList.add('active');
+})
+
+rulesClose.addEventListener('click', () =>{
+  rulesDialog.classList.remove('active');
+})
+
 
 

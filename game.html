@@ -6,8 +6,8 @@
   <title>Rock Paper Scissors | Project 3</title>
   <link rel="icon" href="image/logo.svg" type="image/svg+xml" />
 
-  <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="game.css" />
+  <link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="game.css"/>
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
@@ -45,7 +45,7 @@
       </div>
 
       <div class="header__nav">
-        <button class="rules__button" aria-label="View Rules">
+        <button id="rulesOpen" class="rules__open" aria-label="View Rules">
           <ion-icon name="book"></ion-icon>
         </button>
 
@@ -57,6 +57,47 @@
         </button>
       </div>
     </header>
+
+    <div id="rulesDialog" class="rules__wrapper">
+      
+      <div class="rules__dialog">
+        <button id="rulesClose" class="rules__close">
+          <ion-icon name="close"></ion-icon>
+        </button>
+
+        <header class="rules__header">
+          <h1 class="header__title">rules</h1>
+        </header>
+        
+        <section class="rules__section rules__sectionGap">
+          <h2 class="section__title">how to play</h2>
+          <ul class="section__textBlock">
+            <li class="section__text">Rock beats Scissors</li>
+            <li class="section__text">Scissors beats Paper</li>
+            <li class="section__text">Paper beats Rock</li>
+          </ul>
+        </section>
+
+        <section class="rules__section">
+          <h2 class="section__title">game rules</h2>
+          <ul class="section__textBlock">
+            <li class="section__text">
+              Both players choose one of the three options: Rock, Paper, or Scissors.
+            </li>
+            <li class="section__text">
+              Selections are made at the same time.
+            </li>
+            <li class="section__text">
+              The winner is decided based on the rules above.
+            </li>
+            <li class="section__text">
+              If both players choose the same item, it’s a draw!
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
 
     <section id="game__expression" class="game__expression">
       <span class="expression__wrapper player__expression">
