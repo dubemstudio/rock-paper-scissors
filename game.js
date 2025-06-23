@@ -41,7 +41,6 @@ if(homeReset){
 
     scoreExp.textContent = '';
 
-
     window.location.href = 'index.html';
   })
 }
