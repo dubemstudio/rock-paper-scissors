@@ -39,7 +39,8 @@ if(homeReset){
 
     localStorage.removeItem('playerName');
 
-    expScoreReset();
+    scoreExp.textContent = '';
+
 
     window.location.href = 'index.html';
   })
@@ -57,7 +58,7 @@ if(scoreReset){
     playerExp.src = 'image/rock.png';
     botExp.src = 'image/rock.png';
 
-    expScoreReset();
+    scoreExp.textContent = '';
 
     scoreUpdate();
   })
@@ -83,6 +84,9 @@ function expScoreWait(){
 function move(move){
   disableButton();
   gameExp.classList.add('start');
+
+    botExp.src = 'image/rock.png';
+    playerExp.src = 'image/rock.png';
 
   let time = setTimeout(() =>{
     gameExp.classList.remove('start');
