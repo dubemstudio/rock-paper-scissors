@@ -39,6 +39,8 @@ if(homeReset){
 
     localStorage.removeItem('playerName');
 
+    expScoreReset();
+
     window.location.href = 'index.html';
   })
 }
@@ -55,6 +57,8 @@ if(scoreReset){
     playerExp.src = 'image/rock.png';
     botExp.src = 'image/rock.png';
 
+    expScoreReset();
+
     scoreUpdate();
   })
 
@@ -68,7 +72,13 @@ function disableButton(){
   buttons.forEach(btn => btn.disabled = true);
 }
 
-
+function expScore(result){
+  const results = ['Stalemate!', 'Owned!', 'Ouch!'];
+  scoreExp.textContent = `${results[result]}`;
+}
+function expScoreWait(){
+  scoreExp.textContent = 'Fingers crossed...';
+}
 
 function move(move){
   disableButton();
@@ -82,12 +92,15 @@ function move(move){
     const result = calculation(player, bot);
     
     if(result === 0){
+      expScore(result);
       scoreUpdate(); 
     } else if (result === 1){
       playerScore++
+      expScore(result);
       scoreUpdate(); 
     } else if (result === 2){
       botScore++
+      expScore(result);
       scoreUpdate(); 
     }
 
@@ -95,8 +108,9 @@ function move(move){
     localStorage.setItem('botScore', botScore);
 
     enableButton();
-  },2500)
+  },1500)
 
+  expScoreWait();
 
 }
 
