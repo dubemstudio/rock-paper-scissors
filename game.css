@@ -286,13 +286,14 @@
   align-items: center;
   z-index: 1;
   transform: scale(0);
+  opacity: 0;
+  transition: transform .5s ease-in-out, opacity .3s ease-in-out;
 }
 
 .main__wrapper .rules__wrapper.active{
   transform: scale(1);
+  opacity: 1;
 }
-
-
 
 .rules__wrapper .rules__dialog{
   background-color: var(--color-surface-1dp);
