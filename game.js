@@ -17,8 +17,10 @@ const optionRock = document.getElementById('optionRock');
 const optionPaper = document.getElementById('optionPaper');
 const optionScissors = document.getElementById('optionScissors');
 // scores
-let playerScore = localStorage.getItem('playerScore') || 0;
-let botScore = localStorage.getItem('botScore') || 0;
+const score = JSON.parse(localStorage.getItem('score')) || {
+  player: 0,
+  bot: 0,
+};
 // navigations
 const scoreReset = document.getElementById('scoreReset');
 const homeReset = document.getElementById('homeReset'); 
@@ -31,15 +33,14 @@ const rulesDialog = document.getElementById('rulesDialog');
 
 
 function scoreUpdate(){
-  displayScore.textContent = `${playerScore} : ${botScore}`; 
+  displayScore.textContent = `${score.player} : ${score.bot}`; 
 }
 
 scoreUpdate();
 
 if(homeReset){
   homeReset.addEventListener('click', () =>{
-    localStorage.removeItem('playerScore');
-    localStorage.removeItem('botScore');
+    localStorage.removeItem('score');
 
     localStorage.removeItem('playerName');
 
@@ -51,12 +52,11 @@ if(homeReset){
 
 if(scoreReset){
   scoreReset.addEventListener('click', () =>{
-    localStorage.setItem('playerScore', 0);
-    localStorage.setItem('botScore', 0);
+    score.player = 0;
+    score.bot = 0;
+    localStorage.setItem('score', JSON.stringify(score));
 
-    playerScore = localStorage.getItem('playerScore') || 0;
-    botScore = localStorage.getItem('botScore') || 0;
-
+    JSON.parse(localStorage.getItem('score'));
 
     playerExp.src = 'image/rock.png';
     botExp.src = 'image/rock.png';
@@ -102,20 +102,19 @@ function move(move){
       expScore(result);
       scoreUpdate(); 
     } else if (result === 1){
-      playerScore++
+      score.player++
       expScore(result);
       scoreUpdate(); 
     } else if (result === 2){
-      botScore++
+      score.bot++
       expScore(result);
       scoreUpdate(); 
     }
 
-    localStorage.setItem('playerScore', playerScore);
-    localStorage.setItem('botScore', botScore);
+    localStorage.setItem('score', JSON.stringify(score));
 
     enableButton();
-  },1500)
+  }, 1500)
 
   expScoreWait();
 
